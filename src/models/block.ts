@@ -5,4 +5,5 @@ export class Block{
     public Shard: string;
     public Size: number;
     public BlockHash: string;
+    public Timestamp: string = "jiskaos";
 }

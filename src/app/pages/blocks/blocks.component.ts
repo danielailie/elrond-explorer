@@ -32,4 +32,9 @@ export class BlocksComponent implements AfterViewInit {
           console.log("Blocks ", this.blocks)
         });
   }
+
+  getAge(date: Date): number {
+    let currentDate = new Date()
+    return Math.abs(currentDate.getTime() - date.getTime())
+  }
 }

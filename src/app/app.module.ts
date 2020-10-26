@@ -7,6 +7,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -20,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { BlockDetailsComponent } from './block-details/block-details.component';
 import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [  
   { path: 'dashboard', component: DashboardComponent },
@@ -28,6 +31,7 @@ const routes: Routes = [
   { path: 'blocks/:hash', component: BlockDetailsComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'transactions', component: TransactionsComponent },
+  { path: 'transactions/:hash', component: TransactionDetailsComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'validators', component: ValidatorsComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -54,7 +58,10 @@ const routes: Routes = [
     MatListModule,
     HttpClientModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatCardModule,
+    MatDividerModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

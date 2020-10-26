@@ -30,7 +30,14 @@ export class TransactionsComponent implements AfterViewInit {
           this.transactions = transactions     
           this.dataSource = new MatTableDataSource<Transaction>(this.transactions);
           this.dataSource.paginator = this.paginator
+          console.log("transactions ", this.transactions)
         });
   }
 
+  truncateLongString(text: string): string{
+    var str = text
+    var substring = str.substring(10, str.length - 10);
+    str = str.replace(substring, "...")
+    return str
+  }
 }

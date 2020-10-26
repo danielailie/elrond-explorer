@@ -21,7 +21,7 @@ export class BlockDetailsComponent implements OnInit {
   getBlockByHash(): void {
     this.blocksService.getBlockById(this.activatedRoute.snapshot.params.hash)
         .subscribe((block) => {
-          this.block = block
+          this.block = block[0]
           console.log("details ", block)
         });
   }

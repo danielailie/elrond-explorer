@@ -10,6 +10,7 @@ export class TransactionsService {
   constructor(private http: HttpClient) {}
 
   private transactionsUrl = 'http://localhost:3000/transactions';
+  private getTransactionByHashUrl = 'http://localhost:3000/transactions?Hash={hash}';
 
   getTransactions(): Observable<Transaction[]> {
     console.log("Helloooo ")
@@ -17,6 +18,6 @@ export class TransactionsService {
   }
 
   getTransactionById(hash: string): Observable<Transaction> {
-    return;
+    return this.http.get<Transaction>(this.getTransactionByHashUrl.replace("{hash}", hash));
   }
 }

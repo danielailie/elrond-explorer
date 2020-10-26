@@ -5,7 +5,9 @@ export class Transaction{
     public Status: string;
     public Timestamp: Time;
     public Sender: string;
+    public SenderShard: string;
     public Receiver: string;
+    public ReceiverShard: string;
     public Value: number;
     public Fee: number;
     public GasLimit: number;
@@ -14,5 +16,4 @@ export class Transaction{
     public Nonce: number;
     public Data: string;
     public Age: number;
-    public Shard: string;
 }
