@@ -1,0 +1,10 @@
+<span mat-button [matMenuTriggerFor]="menu" class="menu">Explorer
+    <mat-icon class="inline-icon">expand_more</mat-icon>
+</span>
+<mat-menu #menu="matMenu">
+  <a href="https://elrond.com/" target="_blank" mat-menu-item>Main site</a>
+  <a href="https://wallet.elrond.com/" target="_blank" mat-menu-item >Wallet</a>  
+  <a href="http://localhost:4200" target="_blank" mat-menu-item >Explorer</a>  
+  <a href="https://bridge.elrond.com/" target="_blank" mat-menu-item >Bridge</a> 
+  <a href="https://docs.elrond.com/" target="_blank" mat-menu-item >Docs</a>
+</mat-menu>

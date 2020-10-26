@@ -1,0 +1,37 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.toolbar-item{
+    font-size: 16px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    flex-direction: row;
+    align-items: center;
+}
+.app-toolbar{
+    background: transparent;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.inline-icon {
+    vertical-align: middle;
+  }
+
+.round-input{
+    border-radius: 20px;
+    text-align: center;
+    width: fit-content;
+}
+.nav-list{
+  display: flex;
+  flex-direction: row;
+}
+.data-toolbar{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 10%; 
+  margin-right: 10%
+}
+.material-icons.color_white { color: #FFFFFF; }

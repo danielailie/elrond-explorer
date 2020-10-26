@@ -1,0 +1,44 @@
+<mat-toolbar class="app-toolbar">
+  <app-menu></app-menu>
+
+  <mat-nav-list class="nav-list">
+    <mat-list-item>
+      <a matLine href="/dashboard">Dashboard</a>
+    </mat-list-item>
+    <mat-list-item>
+      <a matLine href="/blocks">Blocks</a>
+    </mat-list-item>
+    <mat-list-item>
+      <a matLine href="/transactions">Transactions</a>
+    </mat-list-item>
+    <mat-list-item>
+      <a matLine href="/validators">Validators</a>
+    </mat-list-item>
+  </mat-nav-list>
+
+  <span class="example-spacer"></span>
+
+  <textarea
+    class="toolbar-item, round-input"
+    matInput
+    placeholder="Address /Txn Hash/ Block"
+  ></textarea>
+
+  <span mat-button [matMenuTriggerFor]="menu" class="menu, toolbar-item"
+    >Mainet
+    <mat-icon class="inline-icon">expand_more</mat-icon>
+  </span>
+  <mat-menu #menu="matMenu">
+    <a href="http://localhost:4200/" mat-menu-item>Main site</a>
+    <a href="https://testnet-explorer.elrond.com/" mat-menu-item>Testnet</a>
+  </mat-menu>
+</mat-toolbar>
+<mat-toolbar style="background: #1b46c2">
+  <div class="data-toolbar">
+    <mat-icon class="material-icons color_white">watch_later</mat-icon>
+    <mat-icon>watch_later</mat-icon>
+    <mat-icon>watch_later</mat-icon>
+    <mat-icon>watch_later</mat-icon>
+    <mat-icon>watch_later</mat-icon>
+  </div>
+</mat-toolbar>
