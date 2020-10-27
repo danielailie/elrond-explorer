@@ -37,4 +37,11 @@ export class BlocksComponent implements AfterViewInit {
     let currentDate = new Date()
     return Math.abs(currentDate.getTime() - date.getTime())
   }
+  
+  truncateLongString(text: string): string{
+    var str = text
+    var substring = str.substring(10, str.length - 10);
+    str = str.replace(substring, "...")
+    return str
+  }
 }

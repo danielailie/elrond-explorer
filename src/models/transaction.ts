@@ -1,7 +1,8 @@
 import { Time } from '@angular/common';
 
 export class Transaction{
-    public Hash: string;
+    public Hash: string;    
+    public MiniBlockHash: string;
     public Status: string;
     public Timestamp: Time;
     public Sender: string;

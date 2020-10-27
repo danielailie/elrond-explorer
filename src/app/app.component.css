@@ -1,7 +1,24 @@
 .app-content{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: #353535!important;
+}
+.row{
+    padding: 10px;
 }
 .inline-icon {
     vertical-align: middle;
+  }
+
+  .card-label{
+      text-align: right;
+  }
+
+  body{
+    color: #353535!important;
+    background-color: #fafafa;
+  }
+
+  .mat-cell, .mat-footer-cell{
+    color: #5a6169;
   }

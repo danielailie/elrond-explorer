@@ -1,3 +1,14 @@
 table {
     width: 100%;
   }
+
+  a {
+    text-decoration: none;
+    color: #1b46c2c9;
+  }
+  
+  .mat-cell,
+  .mat-footer-cell {
+    color: #5a6169cf;
+  }
+  

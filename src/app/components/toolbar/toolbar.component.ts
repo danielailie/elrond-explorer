@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Stats } from 'src/models/stats';
+import { BehaviorSubject } from 'rxjs';
+import { StatsService } from 'src/app/services/stats.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private statsService: StatsService) { }
+  stats: Stats = new Stats;
+  testEmitter$ = new BehaviorSubject<Stats>(this.stats);
 
   ngOnInit(): void {
+    this.getStats()
   }
-
+  getStats(): void {
+    this.statsService.getStats()
+        .subscribe((stats) => {
+          this.stats = stats
+          this.testEmitter$.next(this.stats);
+          console.log("Stats ", stats)
+        });
+  }
 }

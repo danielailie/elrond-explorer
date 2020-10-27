@@ -9,6 +9,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -23,6 +24,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { BlockDetailsComponent } from './block-details/block-details.component';
 import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
 import { CommonModule } from '@angular/common';
+import { StatsComponent } from './components/stats/stats.component';
 
 const routes: Routes = [  
   { path: 'dashboard', component: DashboardComponent },
@@ -46,7 +48,8 @@ const routes: Routes = [
     TransactionsComponent,
     ValidatorsComponent,
     BlockDetailsComponent,
-    TransactionDetailsComponent
+    TransactionDetailsComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(routes),
@@ -61,7 +64,8 @@ const routes: Routes = [
     MatPaginatorModule,
     MatCardModule,
     MatDividerModule,
-    CommonModule
+    CommonModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

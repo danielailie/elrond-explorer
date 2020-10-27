@@ -1,37 +1,73 @@
 .example-spacer {
-    flex: 1 1 auto;
-  }
-.toolbar-item{
-    font-size: 16px;
-    display: flex;
-    box-sizing: border-box;
-    padding: 0 16px;
-    flex-direction: row;
-    align-items: center;
+  flex: 1 1 auto;
 }
-.app-toolbar{
-    background: transparent;
-    margin-left: 10%;
-    margin-right: 10%;
+.toolbar-item {
+  font-size: 16px;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 16px;
+  flex-direction: row;
+  align-items: center;
+}
+.app-toolbar {
+  background: transparent;
+  color: #212529;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: auto;
 }
 .inline-icon {
-    vertical-align: middle;
-  }
-
-.round-input{
-    border-radius: 20px;
-    text-align: center;
-    width: fit-content;
+  vertical-align: middle;
 }
-.nav-list{
+
+.round-input {
+  border-radius: 20px;
+  text-align: center;
+  width: fit-content;
+  border-width: thin;
+}
+.nav-list {
   display: flex;
   flex-direction: row;
 }
-.data-toolbar{
+
+.mat-list-base .mat-list-item {
+  color: #b8b8b8 !important;
+}
+
+.mat-cell,
+.mat-footer-cell {
+  color: #5a6169;
+}
+
+.data-toolbar {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-left: 10%; 
-  margin-right: 10%
+  margin-left: 20%;
+  margin-right: 20%;
 }
-.material-icons.color_white { color: #FFFFFF; }
+
+.data-toolbar .row {
+  padding: 0;
+}
+.material-icons.color_white {
+  color: #fafafa;
+  opacity:  0.7;
+  align-self: center;
+}
+ .align-center{
+   align-self: center;
+ }
+
+ .stat-label{
+   display: flex;
+   color: #fafafa;
+   opacity: 0.7;
+   font-size: 16px;
+ }
+
+ .stats-toolbar {
+  background: #1b46c2;
+  height: 120px;
+}

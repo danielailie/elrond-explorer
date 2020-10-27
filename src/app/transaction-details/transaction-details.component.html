@@ -3,9 +3,9 @@
   <mat-list>
     <mat-divider></mat-divider>
     <mat-list-item>
-      <div class="row">
-          <div class="col-lg-2">Hash</div>
-          <div class="col-lg-10"><a href="/miniblocks/e8a35b49bea2647f86798416f68fab3436815ec2dd73d48f803acf5c210631fb">{{ (testEmitter$ | async).Hash }}</a></div>
+      <div class="mat-list-text">
+          <div class="col-2-right">Hash</div>
+          <div class="col-10-left">{{ (testEmitter$ | async).Hash }}</div>
         </div>
     </mat-list-item>
     <mat-divider></mat-divider>
@@ -19,7 +19,7 @@
     <mat-divider></mat-divider>
     <mat-list-item>
       <label>Miniblock</label>
-      <label>{{ (testEmitter$ | async).Hash }}</label>
+      <label>{{ (testEmitter$ | async).MiniBlockHash }}</label>
     </mat-list-item>      
     <mat-divider></mat-divider>
     <mat-list-item>
