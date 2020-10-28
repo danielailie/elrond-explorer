@@ -5,5 +5,6 @@ export class Block{
     public Shard: string;
     public Size: number;
     public BlockHash: string;
-    public Timestamp: string = "jiskaos";
-}
+    public Timestamp: number;
+    public DisplayDate: string;
+} 

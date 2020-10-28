@@ -1,16 +1,16 @@
+.data-toolbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
 
-  .data-toolbar {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .data-toolbar .row {
-    padding: 0;
-  }
-
+.data-toolbar .row {
+  padding: 0;
+}
 
 .stats-toolbar {
- background: #1b46c2;
- height: 120px;
+  background: #1b46c2;
+  height: 120px;
 }

@@ -1,34 +1,40 @@
-.app-content{
-    margin-left: 20%;
-    margin-right: 20%;
-    color: #353535!important;
+.app-content {
+  margin-left: 20%;
+  margin-right: 20%;
+  color: #353535 !important;
 }
-.row{
-    padding: 10px;
+.row {
+  padding: 10px;
 }
 .inline-icon {
-    vertical-align: middle;
-  }
+  vertical-align: middle;
+}
 
-  .card-label{
-      text-align: right;
-  }
+.card-label {
+  text-align: right;
+  opacity: 0.7;
+}
 
-  body{
-    color: #353535!important;
-    background-color: #fafafa;
-  }
+.card-value {
+  opacity: 0.7;
+}
 
-  .mat-cell, .mat-footer-cell{
-    color: #5a6169;
-  }
+body {
+  color: #353535 !important;
+  background-color: #fafafa;
+}
 
-  .material-icons.color_white {
-    color: #fafafa;
-    opacity:  0.7;
-    align-self: center;
-  }
+.mat-cell,
+.mat-footer-cell {
+  color: #5a6169;
+}
 
-  .full-width{
-    width: 100%;
-  }
+.material-icons.color_white {
+  color: #fafafa;
+  opacity: 0.7;
+  align-self: center;
+}
+
+.full-width {
+  width: 100%;
+}

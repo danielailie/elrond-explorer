@@ -28,5 +28,8 @@ export class TransactionDetailsComponent implements OnInit {
           console.log("details ", transaction)
         });
   }
-
+  
+  getDisplayDate(timestamp: number): string{
+    return new Date(timestamp*1000).toLocaleString()
+  }
 }

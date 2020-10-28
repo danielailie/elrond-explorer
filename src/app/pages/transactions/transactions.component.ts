@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { interval } from 'rxjs';
+import { startWith, switchMap } from 'rxjs/operators';
 import { TransactionsService } from 'src/app/services/transactions.service';
 import { Transaction } from 'src/models/transaction';
 
@@ -9,7 +11,7 @@ import { Transaction } from 'src/models/transaction';
   templateUrl: './transactions.component.html',
   styleUrls: ['./transactions.component.css']
 })
-export class TransactionsComponent implements AfterViewInit {
+export class TransactionsComponent implements OnInit {
 
   displayedColumns: string[] = ['Hash', 'Age', 'Shard', 'From', 'To', 'Value'];  
   
@@ -20,21 +22,23 @@ export class TransactionsComponent implements AfterViewInit {
 
   constructor(private transactionsService: TransactionsService) { }
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     this.getTransactions()
   }
 
   getTransactions(): void {
-    this.transactionsService.getTransactions()
-        .subscribe((transactions) => {     
-          this.transactions = transactions     
+    interval(5000)
+      .pipe(
+        startWith(0),
+        switchMap(() => this.transactionsService.getTransactions())
+      ).subscribe((transactions) => {
+        this.transactions = transactions     
           this.dataSource = new MatTableDataSource<Transaction>(this.transactions);
           this.dataSource.paginator = this.paginator
           console.log("transactions ", this.transactions)
-        });
-  }
+  })};
 
-  truncateLongString(text: string): string{
+  getDisplayHash(text: string): string{
     var str = text
     var substring = str.substring(10, str.length - 10);
     str = str.replace(substring, "...")

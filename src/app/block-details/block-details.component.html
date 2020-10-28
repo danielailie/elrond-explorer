@@ -16,7 +16,7 @@
   <mat-divider></mat-divider>
   <div class="row">
     <div class="col-lg-2 card-label">Timestamp</div>
-    <div class="col-lg-10">{{ (testEmitter$ | async).Age }}</div>
+    <div class="col-lg-10">{{ getDisplayDate((testEmitter$ | async).Timestamp) }}</div>
   </div>
 
   <mat-divider></mat-divider>

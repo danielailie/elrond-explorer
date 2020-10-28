@@ -1,4 +1,6 @@
-<h4>Blocks</h4>
+<div class="row">
+  <h4>Blocks</h4>
+</div>
 <mat-card>
   <table mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="Block">
@@ -42,7 +44,7 @@
   </table>
 
   <mat-paginator
-    [pageSizeOptions]="[5, 10, 20]"
+    [pageSizeOptions]="[10, 20, 50]"
     showFirstLastButtons
   ></mat-paginator>
 </mat-card>

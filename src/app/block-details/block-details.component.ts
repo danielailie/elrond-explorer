@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { Block } from 'src/models/block';
+import { DatetimeService } from '../datetime.service';
 import { BlocksService } from '../services/blocks.service';
 
 @Component({
@@ -12,7 +13,8 @@ import { BlocksService } from '../services/blocks.service';
 export class BlockDetailsComponent implements OnInit {
 
   constructor(private blocksService: BlocksService,
-    private activatedRoute: ActivatedRoute) { }
+    private activatedRoute: ActivatedRoute,
+    private datetimeService: DatetimeService) { }
   block: Block = new Block
   testEmitter$ = new BehaviorSubject<Block>(this.block);
 
@@ -29,4 +31,7 @@ export class BlockDetailsComponent implements OnInit {
         });
   }
 
+  getDisplayDate(timestamp: number): string{
+    return new Date(timestamp*1000).toLocaleString()
+  }
 }
