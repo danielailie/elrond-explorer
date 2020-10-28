@@ -22,3 +22,13 @@
   .mat-cell, .mat-footer-cell{
     color: #5a6169;
   }
+
+  .material-icons.color_white {
+    color: #fafafa;
+    opacity:  0.7;
+    align-self: center;
+  }
+
+  .full-width{
+    width: 100%;
+  }

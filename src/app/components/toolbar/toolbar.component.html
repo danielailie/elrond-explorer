@@ -33,52 +33,6 @@
     <a href="https://testnet-explorer.elrond.com/" mat-menu-item>Testnet</a>
   </mat-menu>
 </mat-toolbar>
-<mat-toolbar class="stats-toolbar">
-  <div class="data-toolbar">
-    <div class="row">
-      <div class="col-3 align-center">
-        <mat-icon class="material-icons color_white">watch_later</mat-icon>
-      </div>
-      <div class="col-9">
-        <span class="stat-label">Epoch</span>
-        <span class="stat-label">{{ (testEmitter$ | async).Epoch }}</span>
-      </div>
-    </div>
-    <div>
-      <div class="col-3 align-center">
-        <mat-icon class="material-icons color_white">watch_later</mat-icon>
-      </div>
-      <div>
-        <span>Blocks</span>
-        <span>{{ (testEmitter$ | async).Blocks }}</span>
-      </div>
-    </div>
-    <div>
-      <div class="col-3 align-center">
-        <mat-icon class="material-icons color_white">watch_later</mat-icon>
-      </div>
-      <div>
-        <span>Shards</span>
-        <span>{{ (testEmitter$ | async).Shards }}</span>
-      </div>
-    </div>
-    <div>
-      <div class="col-3 align-center">
-        <mat-icon class="material-icons color_white">watch_later</mat-icon>
-      </div>
-      <div>
-        <span>Peak Tps</span>
-        <span>{{ (testEmitter$ | async).PeakTps }}</span>
-      </div>
-    </div>
-    <div>
-      <div class="col-3 align-center">
-        <mat-icon class="material-icons color_white">watch_later</mat-icon>
-      </div>
-      <div>
-        <span>Transactions</span>
-        <span>{{ (testEmitter$ | async).Transactions }}</span>
-      </div>
-    </div>
-  </div>
-</mat-toolbar>
+
+<app-stats class="full-width"></app-stats>
+

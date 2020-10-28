@@ -25,6 +25,7 @@ import { BlockDetailsComponent } from './block-details/block-details.component';
 import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
 import { CommonModule } from '@angular/common';
 import { StatsComponent } from './components/stats/stats.component';
+import { StatDetailsComponent } from './components/stat-details/stat-details.component';
 
 const routes: Routes = [  
   { path: 'dashboard', component: DashboardComponent },
@@ -49,7 +50,8 @@ const routes: Routes = [
     ValidatorsComponent,
     BlockDetailsComponent,
     TransactionDetailsComponent,
-    StatsComponent
+    StatsComponent,
+    StatDetailsComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(routes),

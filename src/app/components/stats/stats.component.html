@@ -1,9 +1,9 @@
-<div class="row">
-    <div class="col-3 align-center">
-      <mat-icon class="material-icons color_white">watch_later</mat-icon>
-    </div>
-    <div class="col-9">
-      <span class="stat-label">Epoch</span>
-      <span class="stat-label"></span>
-    </div>
+<mat-toolbar class="stats-toolbar">
+  <div class="data-toolbar">
+      <app-stat-details [statLabel]="'Epoch'" [statValue]="(testEmitter$ | async).Epoch"></app-stat-details>
+      <app-stat-details [statLabel]="'Blocks'" [statValue]="(testEmitter$ | async).Blocks"></app-stat-details>
+      <app-stat-details [statLabel]="'Shards'" [statValue]="(testEmitter$ | async).Shards"></app-stat-details>
+      <app-stat-details [statLabel]="'Peak Tps'" [statValue]="(testEmitter$ | async).PeakTps"></app-stat-details>
+      <app-stat-details [statLabel]="'Transactions'" [statValue]="(testEmitter$ | async).Transactions"></app-stat-details>
   </div>
+</mat-toolbar>

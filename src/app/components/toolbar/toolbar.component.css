@@ -39,35 +39,3 @@
 .mat-footer-cell {
   color: #5a6169;
 }
-
-.data-toolbar {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-left: 20%;
-  margin-right: 20%;
-}
-
-.data-toolbar .row {
-  padding: 0;
-}
-.material-icons.color_white {
-  color: #fafafa;
-  opacity:  0.7;
-  align-self: center;
-}
- .align-center{
-   align-self: center;
- }
-
- .stat-label{
-   display: flex;
-   color: #fafafa;
-   opacity: 0.7;
-   font-size: 16px;
- }
-
- .stats-toolbar {
-  background: #1b46c2;
-  height: 120px;
-}
