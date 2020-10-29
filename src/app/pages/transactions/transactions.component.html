@@ -7,7 +7,7 @@
       <th mat-header-cell *matHeaderCellDef>Txn Hash</th>
       <td mat-cell *matCellDef="let element">
         <a [routerLink]="['/transactions', element.Hash]"
-          >{{ truncateLongString(element.Hash) }}
+          >{{ getDisplayHash(element.Hash) }}
         </a>
       </td>
     </ng-container>
@@ -28,7 +28,7 @@
       <th mat-header-cell *matHeaderCellDef>From</th>
       <td mat-cell *matCellDef="let element">
         <a [routerLink]="['/transactions', element.Sender]">{{
-          truncateLongString(element.Sender)
+          getDisplayHash(element.Sender)
         }}</a>
       </td>
     </ng-container>
@@ -37,7 +37,7 @@
       <th mat-header-cell *matHeaderCellDef>To</th>
       <td mat-cell *matCellDef="let element">
         <a [routerLink]="['/transactions', element.Receiver]">{{
-          truncateLongString(element.Receiver)
+          getDisplayHash(element.Receiver)
         }}</a>
       </td>
     </ng-container>

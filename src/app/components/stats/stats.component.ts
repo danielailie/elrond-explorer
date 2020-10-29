@@ -17,7 +17,7 @@ export class StatsComponent implements OnInit {
   ngOnInit(): void {
     this.getStats();
   }
-  getStats(): void {
+  getStats(): void { 
     interval(5000)
       .pipe(
         startWith(0),

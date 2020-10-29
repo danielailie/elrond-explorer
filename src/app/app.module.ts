@@ -21,11 +21,12 @@ import { TransactionsComponent } from './pages/transactions/transactions.compone
 import { ValidatorsComponent } from './pages/validators/validators.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { BlockDetailsComponent } from './block-details/block-details.component';
-import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
+import { BlockDetailsComponent } from './components/block-details/block-details.component';
+import { TransactionDetailsComponent } from './components/transaction-details/transaction-details.component';
 import { CommonModule } from '@angular/common';
 import { StatsComponent } from './components/stats/stats.component';
 import { StatDetailsComponent } from './components/stat-details/stat-details.component';
+import { DetailsRowComponent } from './components/details-row/details-row.component';
 
 const routes: Routes = [  
   { path: 'dashboard', component: DashboardComponent },
@@ -51,7 +52,8 @@ const routes: Routes = [
     BlockDetailsComponent,
     TransactionDetailsComponent,
     StatsComponent,
-    StatDetailsComponent
+    StatDetailsComponent,
+    DetailsRowComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(routes),

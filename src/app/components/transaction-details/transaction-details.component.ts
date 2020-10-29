@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
+import { TransactionsService } from 'src/app/services/transactions.service';
 import { Transaction } from 'src/models/transaction';
-import { TransactionsService } from '../services/transactions.service';
 
 @Component({
   selector: 'app-transaction-details',

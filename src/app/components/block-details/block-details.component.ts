@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
+import { DatetimeService } from 'src/app/datetime.service';
+import { BlocksService } from 'src/app/services/blocks.service';
 import { Block } from 'src/models/block';
-import { DatetimeService } from '../datetime.service';
-import { BlocksService } from '../services/blocks.service';
 
 @Component({
   selector: 'app-block-details',

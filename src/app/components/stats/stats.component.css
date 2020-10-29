@@ -6,6 +6,26 @@
   margin-right: 20%;
 }
 
+@media only screen and (max-width: 640px) {
+  .data-toolbar {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .data-toolbar {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .data-toolbar {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
 .data-toolbar .row {
   padding: 0;
 }

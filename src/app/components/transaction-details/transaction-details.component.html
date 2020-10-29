@@ -1,0 +1,18 @@
+<div class="row">
+  <h4>Transaction Details</h4>
+</div>
+<mat-card>
+  <app-details-row [label]="'Hash'" [value]="(testEmitter$ | async).Hash"></app-details-row>
+  <app-details-row [label]="'Satus'" [value]="(testEmitter$ | async).Satus"></app-details-row>
+  <app-details-row [label]="'Timestamp'" [value]="getDisplayDate((testEmitter$ | async).Timestamp)"></app-details-row>
+  <app-details-row [label]="'Miniblock'" [value]="(testEmitter$ | async).MiniBlockHash"></app-details-row>
+  <app-details-row [label]="'From'" [value]="(testEmitter$ | async).Sender"></app-details-row>
+  <app-details-row [label]="'To'" [value]="(testEmitter$ | async).Receiver"></app-details-row>
+  <app-details-row [label]="'Value'" [value]="(testEmitter$ | async).Value"></app-details-row>
+  <app-details-row [label]="'Transaction Fee'" [value]="(testEmitter$ | async).Fee"></app-details-row>
+  <app-details-row [label]="'Gas Limit'" [value]="(testEmitter$ | async).GasLimit"></app-details-row>
+  <app-details-row [label]="'Gas Used'" [value]="(testEmitter$ | async).GasUsed"></app-details-row>
+  <app-details-row [label]="'Gas Price'" [value]="(testEmitter$ | async).GasPrice"></app-details-row>
+  <app-details-row [label]="'Nonce'" [value]="(testEmitter$ | async).Nonce"></app-details-row>
+  <app-details-row [label]="'Input Data'" [value]="(testEmitter$ | async).Data"></app-details-row>
+</mat-card>
