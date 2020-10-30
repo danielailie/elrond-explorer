@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DetailsRowComponent implements OnInit {
   @Input() label: string;
-  @Input() value: number;
+  @Input() value: any;
   
   constructor() { }
 

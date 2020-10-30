@@ -1,0 +1,13 @@
+<div *ngFor="let transaction of transactions; let i = index"> 
+    <div class="row">
+        <div class="col-6 summary-text">
+            <span><a [routerLink]="['/transactions', transaction.Hash]">{{hashService.getDisplayHash(transaction.Hash)}}</a></span>        
+            <span>{{datetimeService.getAge(transaction.Timestamp)}} </span>
+        </div>
+        <div class="col-6 summary-text">      
+            <div>From <a [routerLink]="['/address', transaction.Receiver]">{{hashService.getDisplayHash(transaction.Receiver)}}</a></div>        
+            <div>To <a [routerLink]="['/address', transaction.Sender]">{{hashService.getDisplayHash(transaction.Sender)}}</a></div>  
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+</div>

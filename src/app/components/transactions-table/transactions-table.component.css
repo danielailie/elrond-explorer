@@ -1,0 +1,9 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-cell,
+  .mat-footer-cell {
+    color: #5a6169cf;
+  }
+  

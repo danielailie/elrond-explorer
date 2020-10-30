@@ -1,5 +1,5 @@
 export class Block{
-    public Id: number;
+    public Height: number;
     public Age: number;
     public Txns: number;
     public Shard: string;

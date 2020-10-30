@@ -1,47 +1,42 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { interval } from 'rxjs';
 import { startWith, switchMap } from 'rxjs/operators';
+import { DatetimeService } from 'src/app/datetime.service';
+import { HashService } from 'src/app/hash.service';
 import { TransactionsService } from 'src/app/services/transactions.service';
 import { Transaction } from 'src/models/transaction';
 
 @Component({
   selector: 'app-transactions',
   templateUrl: './transactions.component.html',
-  styleUrls: ['./transactions.component.css']
+  styleUrls: ['./transactions.component.css'],
 })
 export class TransactionsComponent implements OnInit {
-
-  displayedColumns: string[] = ['Hash', 'Age', 'Shard', 'From', 'To', 'Value'];  
-  
-  transactions: Transaction[]; 
-  dataSource : MatTableDataSource<Transaction>;
+  transactions: Transaction[];
+  dataSource: MatTableDataSource<Transaction>;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-
-  constructor(private transactionsService: TransactionsService) { }
+  constructor(private transactionsService: TransactionsService
+  ) {}
 
   ngOnInit(): void {
-    this.getTransactions()
+    this.getTransactions();
   }
 
   getTransactions(): void {
-    interval(5000)
+   interval(5000)
       .pipe(
         startWith(0),
         switchMap(() => this.transactionsService.getTransactions())
-      ).subscribe((transactions) => {
-        this.transactions = transactions     
-          this.dataSource = new MatTableDataSource<Transaction>(this.transactions);
-          this.dataSource.paginator = this.paginator
-          console.log("transactions ", this.transactions)
-  })};
-
-  getDisplayHash(text: string): string{
-    var str = text
-    var substring = str.substring(10, str.length - 10);
-    str = str.replace(substring, "...")
-    return str
+      )
+      .subscribe((transactions) => {
+        this.transactions = transactions;
+        this.dataSource = new MatTableDataSource<Transaction>(
+          this.transactions
+        ); 
+        this.dataSource.paginator = this.paginator;
+      });
   }
 }

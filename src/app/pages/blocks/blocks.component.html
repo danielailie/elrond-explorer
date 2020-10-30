@@ -1,18 +1,23 @@
 <div class="row">
   <h4>Blocks</h4>
 </div>
+
 <mat-card>
   <table mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="Block">
       <th mat-header-cell *matHeaderCellDef>Block</th>
       <td mat-cell *matCellDef="let element">
-        <a [routerLink]="['/blocks', element.BlockHash]">{{ element.Id }} </a>
+        <a [routerLink]="['/blocks', element.BlockHash]"
+          >{{ element.Height }}
+        </a>
       </td>
     </ng-container>
 
     <ng-container matColumnDef="Age">
       <th mat-header-cell *matHeaderCellDef>Age</th>
-      <td mat-cell *matCellDef="let element">{{ element.Age }}</td>
+      <td mat-cell *matCellDef="let element">
+        {{ datetimeService.getAge(element.Timestamp) }}
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="Txns">
@@ -29,7 +34,7 @@
       <th mat-header-cell *matHeaderCellDef>Block Hash</th>
       <td mat-cell *matCellDef="let element">
         <a [routerLink]="['/blocks', element.BlockHash]">{{
-          getDisplayHash(element.BlockHash)
+          hashService.getDisplayHash(element.BlockHash)
         }}</a>
       </td>
     </ng-container>

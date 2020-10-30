@@ -1,0 +1,10 @@
+<div class="row">
+    <h4>Address Details</h4>
+  </div>
+
+  <mat-card>
+    <app-details-row [label]="'Address'" [value]="(addressEmitter$ | async).Address"></app-details-row>
+    <app-details-row [label]="'Balance'" [value]="(addressEmitter$ | async).Balance"></app-details-row>
+  </mat-card>
+
+  <app-transactions-table [dataSource]="dataSource" ></app-transactions-table>

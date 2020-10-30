@@ -8,30 +8,28 @@ import { Block } from 'src/models/block';
 @Component({
   selector: 'app-block-details',
   templateUrl: './block-details.component.html',
-  styleUrls: ['./block-details.component.css']
+  styleUrls: ['./block-details.component.css'],
 })
 export class BlockDetailsComponent implements OnInit {
-
-  constructor(private blocksService: BlocksService,
-    private activatedRoute: ActivatedRoute,
-    private datetimeService: DatetimeService) { }
-  block: Block = new Block
-  testEmitter$ = new BehaviorSubject<Block>(this.block);
+  constructor(
+    public datetimeService: DatetimeService,
+    private blocksService: BlocksService,
+    private activatedRoute: ActivatedRoute
+  ) {}
+  block: Block = new Block();
+  blockEmitter$ = new BehaviorSubject<Block>(this.block);
 
   ngOnInit(): void {
-    this.getBlockByHash()
+    this.getBlockByHash();
   }
 
   getBlockByHash(): void {
-    this.blocksService.getBlockById(this.activatedRoute.snapshot.params.hash)
-        .subscribe((block) => {
-          this.block = block[0]
-          this.testEmitter$.next(this.block);
-          console.log("details ", block)
-        });
-  }
-
-  getDisplayDate(timestamp: number): string{
-    return new Date(timestamp*1000).toLocaleString()
+    this.blocksService
+      .getBlockById(this.activatedRoute.snapshot.params.hash)
+      .subscribe((block) => {
+        this.block = block[0];
+        this.blockEmitter$.next(this.block);
+        console.log('details ', block);
+      });
   }
 }

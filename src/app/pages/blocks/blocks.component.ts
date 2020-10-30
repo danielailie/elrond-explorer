@@ -3,6 +3,8 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { interval } from 'rxjs';
 import { switchMap, startWith } from 'rxjs/operators';
+import { DatetimeService } from 'src/app/datetime.service';
+import { HashService } from 'src/app/hash.service';
 import { BlocksService } from 'src/app/services/blocks.service';
 import { Block } from 'src/models/block';
 
@@ -17,7 +19,7 @@ export class BlocksComponent implements OnInit {
   dataSource : MatTableDataSource<Block>;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private blocksService: BlocksService) { }
+  constructor(public datetimeService:DatetimeService, public hashService:HashService, private blocksService: BlocksService) { }
 
   ngOnInit(): void {
     this.getBlocks();
@@ -33,13 +35,5 @@ export class BlocksComponent implements OnInit {
         this.dataSource = new MatTableDataSource<Block>(this.blocks);
         this.dataSource.paginator = this.paginator
         console.log("Blocks ", this.blocks)})
-  }
-
-   
-  getDisplayHash(text: string): string{
-    var str = text
-    var substring = str.substring(10, str.length - 10);
-    str = str.replace(substring, "...")
-    return str
   }
 }

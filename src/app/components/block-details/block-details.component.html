@@ -2,14 +2,14 @@
   <h4>Block Details</h4>
 </div>
 <mat-card>
-  <app-details-row [label]="'Block Height'" [value]="(testEmitter$ | async).Id"></app-details-row>
-  <app-details-row [label]="'Epoch'" [value]="(testEmitter$ | async).Id"></app-details-row>
-  <app-details-row [label]="'Timestamp'" [value]="getDisplayDate((testEmitter$ | async).Timestamp)"></app-details-row>
-  <app-details-row [label]="'Transactions'" [value]="(testEmitter$ | async).Txns"></app-details-row>
-  <app-details-row [label]="'Shard'" [value]="(testEmitter$ | async).Shard"></app-details-row>
-  <app-details-row [label]="'Size'" [value]="(testEmitter$ | async).Size"></app-details-row>
-  <app-details-row [label]="'Proposer'" [value]="(testEmitter$ | async).Size"></app-details-row>
-  <app-details-row [label]="'Consensus Group'" [value]="(testEmitter$ | async).Size"></app-details-row>
-  <app-details-row [label]="'Block Hash'" [value]="(testEmitter$ | async).BlockHash"></app-details-row>
+  <app-details-row [label]="'Block Height'" [value]="(blockEmitter$ | async).Height"></app-details-row>
+  <app-details-row [label]="'Epoch'" [value]="(blockEmitter$ | async).Height"></app-details-row>
+  <app-details-row [label]="'Timestamp'" [value]="datetimeService.getDisplayDate((blockEmitter$ | async).Timestamp)"></app-details-row>
+  <app-details-row [label]="'Transactions'" [value]="(blockEmitter$ | async).Txns"></app-details-row>
+  <app-details-row [label]="'Shard'" [value]="(blockEmitter$ | async).Shard"></app-details-row>
+  <app-details-row [label]="'Size'" [value]="(blockEmitter$ | async).Size"></app-details-row>
+  <app-details-row [label]="'Proposer'" [value]="(blockEmitter$ | async).Size"></app-details-row>
+  <app-details-row [label]="'Consensus Group'" [value]="(blockEmitter$ | async).Size"></app-details-row>
+  <app-details-row [label]="'Block Hash'" [value]="(blockEmitter$ | async).BlockHash"></app-details-row>
   <app-details-row [label]="'Miniblocks'" [value]="'n/a'"></app-details-row>
 </mat-card>

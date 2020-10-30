@@ -27,6 +27,11 @@ import { CommonModule } from '@angular/common';
 import { StatsComponent } from './components/stats/stats.component';
 import { StatDetailsComponent } from './components/stat-details/stat-details.component';
 import { DetailsRowComponent } from './components/details-row/details-row.component';
+import { AddressDetailsComponent } from './pages/address-details/address-details.component';
+import { DetailsRowLinkComponent } from './components/details-row-link/details-row-link.component';
+import { TransactionsTableComponent } from './components/transactions-table/transactions-table.component';
+import { BlocksSummaryComponent } from './components/blocks-summary/blocks-summary.component';
+import { TransactionsSummaryComponent } from './components/transactions-summary/transactions-summary.component';
 
 const routes: Routes = [  
   { path: 'dashboard', component: DashboardComponent },
@@ -36,6 +41,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'transactions', component: TransactionsComponent },
   { path: 'transactions/:hash', component: TransactionDetailsComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'address/:hash', component: AddressDetailsComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'validators', component: ValidatorsComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -53,7 +60,12 @@ const routes: Routes = [
     TransactionDetailsComponent,
     StatsComponent,
     StatDetailsComponent,
-    DetailsRowComponent
+    DetailsRowComponent,
+    AddressDetailsComponent,
+    DetailsRowLinkComponent,
+    TransactionsTableComponent,
+    BlocksSummaryComponent,
+    TransactionsSummaryComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(routes),

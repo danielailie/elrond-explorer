@@ -1,0 +1,13 @@
+<div *ngFor="let block of blocks; let i = index">
+    <div class="row">
+        <div class="col-6 summary-text">
+            <span><a [routerLink]="['/blocks', block.BlockHash]">{{block.Height}}</a> in {{block.Shard}} </span>        
+            <span>{{datetimeService.getAge(block.Timestamp)}} </span>
+        </div>
+        <div class="col-6 summary-text">      
+            <div>Hash <a [routerLink]="['/blocks', block.BlockHash]">{{hashService.getDisplayHash(block.BlockHash)}}</a></div>        
+            <div>{{block.Txns}} txns</div>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+</div>
