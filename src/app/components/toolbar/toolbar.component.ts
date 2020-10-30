@@ -22,7 +22,6 @@ export class ToolbarComponent implements OnInit {
         .subscribe((stats) => {
           this.stats = stats
           this.testEmitter$.next(this.stats);
-          console.log("Stats ", stats)
         });
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-import { DatetimeService } from 'src/app/datetime.service';
+import { DatetimeService } from 'src/app/services/datetime.service';
 import { TransactionsService } from 'src/app/services/transactions.service';
 import { Transaction } from 'src/models/transaction';
 

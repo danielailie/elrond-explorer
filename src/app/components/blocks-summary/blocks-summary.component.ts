@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { startWith, switchMap } from 'rxjs/operators';
-import { DatetimeService } from 'src/app/datetime.service';
-import { HashService } from 'src/app/hash.service';
 import { BlocksService } from 'src/app/services/blocks.service';
+import { DatetimeService } from 'src/app/services/datetime.service';
+import { HashService } from 'src/app/services/hash.service';
 import { Block } from 'src/models/block';
 
 @Component({

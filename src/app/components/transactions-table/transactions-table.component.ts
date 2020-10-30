@@ -1,8 +1,8 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { DatetimeService } from 'src/app/datetime.service';
-import { HashService } from 'src/app/hash.service';
+import { DatetimeService } from 'src/app/services/datetime.service';
+import { HashService } from 'src/app/services/hash.service';
 import { Transaction } from 'src/models/transaction';
 
 @Component({

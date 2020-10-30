@@ -1,15 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'
-import { MatMenuModule} from '@angular/material/menu';
-import { MatToolbarModule, MatToolbar} from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTabsModule } from '@angular/material/tabs';
-import {MatListModule} from '@angular/material/list';
-import {MatTableModule} from '@angular/material/table';
-import {MatCardModule} from '@angular/material/card';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatGridListModule} from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -20,7 +11,6 @@ import { BlocksComponent } from './pages/blocks/blocks.component';
 import { TransactionsComponent } from './pages/transactions/transactions.component';
 import { ValidatorsComponent } from './pages/validators/validators.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MatPaginatorModule } from '@angular/material/paginator';
 import { BlockDetailsComponent } from './components/block-details/block-details.component';
 import { TransactionDetailsComponent } from './components/transaction-details/transaction-details.component';
 import { CommonModule } from '@angular/common';
@@ -32,6 +22,7 @@ import { DetailsRowLinkComponent } from './components/details-row-link/details-r
 import { TransactionsTableComponent } from './components/transactions-table/transactions-table.component';
 import { BlocksSummaryComponent } from './components/blocks-summary/blocks-summary.component';
 import { TransactionsSummaryComponent } from './components/transactions-summary/transactions-summary.component';
+import { MaterialUiModule } from './material-ui/material-ui.module';
 
 const routes: Routes = [  
   { path: 'dashboard', component: DashboardComponent },
@@ -70,18 +61,9 @@ const routes: Routes = [
   imports: [
     BrowserModule, RouterModule.forRoot(routes),
     BrowserAnimationsModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatTabsModule,
-    MatListModule,
-    HttpClientModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatCardModule,
-    MatDividerModule,
     CommonModule,
-    MatGridListModule
+    HttpClientModule,
+    MaterialUiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
